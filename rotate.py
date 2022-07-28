@@ -30,15 +30,15 @@ class Solution:
         # return: List[List[int]]
         
         # TODO: Write code below to return a nested list with the solution to the prompt
-        # num = len(matrix[0])
-        # for i in range(num // 2):
-        #     for j in range(i, num - i - 1):
-        #         temp = matrix[i][j]
-        #         matrix[num - 1 - j][i] = matrix[num - 1 - i][num - 1 - j]
-        #         matrix[num - 1 - i][num - 1 - j] = matrix[j][num - 1 - i]
-        #         matrix[j][num - 1 - i] = temp
-        # return matrix
-        return [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0])-1,-1,-1)]
+        num = len(matrix[0])
+        for i in range(num // 2):
+            for j in range(i, num - i - 1):
+                temp = matrix[i][j]
+                matrix[num - 1 - j][i] = matrix[num - 1 - i][num - 1 - j]
+                matrix[num - 1 - i][num - 1 - j] = matrix[j][num - 1 - i]
+                matrix[j][num - 1 - i] = temp
+        return matrix
+        # return [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0])-1,-1,-1)]
 
 
 def main():
