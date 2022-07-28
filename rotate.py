@@ -38,7 +38,7 @@ class Solution:
         #         matrix[num - 1 - i][num - 1 - j] = matrix[j][num - 1 - i]
         #         matrix[j][num - 1 - i] = temp
         # return matrix
-        return [[m[j][i] for j in range(len(m))] for i in range(len(m[0])-1,-1,-1)]
+        return [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0])-1,-1,-1)]
 
 
 def main():
